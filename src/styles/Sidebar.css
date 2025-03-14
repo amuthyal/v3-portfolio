@@ -1,0 +1,87 @@
+/* ✅ Sidebar Defaults */
+.sidebar {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px; /* ✅ Default to only icons */
+    height: auto;
+    background: rgba(10, 25, 47, 0.9);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  /* ✅ Expanded Sidebar */
+  .sidebar.expanded {
+    width: 200px;
+  }
+  
+  /* ✅ Sidebar Icons */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sidebar ul li {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .sidebar ul li a:hover {
+    background: #64ffda;
+    color: #0a192f;
+  }
+  
+  /* ✅ Show Text When Expanded */
+  .sidebar.expanded ul li a {
+    justify-content: flex-start;
+    padding-left: 20px;
+  }
+  
+  /* ✅ Hamburger Menu */
+  .menu-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .menu-toggle:hover {
+    color: #64ffda;
+  }
+  
+  /* ✅ Hide Text in Default View */
+  .sidebar ul li span {
+    display: none;
+  }
+  
+  .sidebar.expanded ul li span {
+    display: inline;
+  }
+  

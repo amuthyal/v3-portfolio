@@ -1,0 +1,128 @@
+/* ✅ INTRO CARD STYLES */
+.intro-card {
+  width: 100%;
+  height: 100vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ INNER BORDER WITH ROUNDED CORNERS */
+.inner-border {
+  width: 90%;
+  height: calc(100vh - 10vh); /* ✅ Leaves margin from top and bottom */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* ✅ Subtle border */
+  border-radius: 15px; /* ✅ Rounded corners */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+/* ✅ Name */
+.name {
+  font-family: "Poppins", sans-serif; /* ✅ Matching font */
+  font-size: 40px; /* Adjust size */
+  font-weight: 300; /* ✅ Not bold */
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 10px; /* Add space between name and image */
+}
+
+/* ✅ PROFILE IMAGE - SQUARE WITH ROUNDED BORDERS */
+.profile-container {
+  margin-bottom: 10px; /* ✅ Adds spacing between image and tagline */
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 15px; /* ✅ Square but with rounded corners */
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Tagline */
+.tagline {
+  font-size: 18px;
+  color: white;
+  font-weight: 300; /* Subtle appearance */
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ✅ SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ✅ Circular Background for Icons */
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; /* Circle size */
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* ✅ Subtle border */
+  border-radius: 50%; /* ✅ Makes it a perfect circle */
+  background: rgba(255, 255, 255, 0.1); /* ✅ Light background */
+  color: #64ffda; /* ✅ Neon Blue */
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  background: #64ffda; /* ✅ Change background color on hover */
+  color: #0a192f; /* ✅ Dark blue for contrast */
+  transform: scale(1.1); /* ✅ Slightly enlarge */
+}
+
+/* ✅ HIRE ME BUTTON (OVAL STYLE) */
+.hire-me-btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 250px; /* ✅ Matches Profile Image Width */
+  padding: 12px 25px;
+  font-size: 18px;
+  text-align: center;
+  color: #0a192f;
+  background: #64ffda; /* ✅ Neon Blue */
+  border: none;
+  border-radius: 50px; /* ✅ Oval shape */
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.hire-me-btn:hover {
+  background: #52e0c4; /* Slightly different shade */
+  transform: scale(1.05);
+}
+
+/* ✅ MOBILE VIEW */
+@media (max-width: 768px) {
+  .name {
+      font-size: 36px;
+  }
+
+  .tagline {
+      font-size: 16px;
+  }
+
+  .profile-img {
+      width: 200px;
+      height: 200px;
+  }
+
+  .hire-me-btn {
+      width: 200px; /* ✅ Matches smaller profile size */
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 40px; /* ✅ Keep oval shape for smaller screens */
+  }
+}

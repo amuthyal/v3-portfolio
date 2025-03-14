@@ -1,0 +1,29 @@
+.description {
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  .intro-button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .highlight {
+    color: #64ffda;
+  }
+  
+  h1, h2 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #ccc;
+  }
+  
