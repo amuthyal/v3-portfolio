@@ -1,0 +1,23 @@
+.about-container {
+    padding: 20px;
+    color: white;
+  }
+  
+  .tech-stack {
+    margin-top: 20px;
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tech-list span {
+    background: #64ffda;
+    color: #0a192f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  

@@ -12,7 +12,7 @@
   width: 90%;
   height: calc(100vh - 10vh); /* ✅ Leaves margin from top and bottom */
   border: 2px solid rgba(255, 255, 255, 0.2); /* ✅ Subtle border */
-  border-radius: 15px; /* ✅ Rounded corners */
+  border-radius: 50px; /* ✅ Rounded corners */
   padding: 20px;
   display: flex;
   flex-direction: column;

@@ -1,29 +1,26 @@
 .description {
     text-align: left;
     max-width: 600px;
+    height: 100%; /* ✅ Make sure it fills the container */
+    min-height: 400px;
+    overflow-y: auto; /* ✅ Enable scrolling */
+    scrollbar-width: thin;
+    scrollbar-color: #64ffda transparent;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* ✅ Better visibility */
   }
   
-  .intro-button {
+  /* ✅ Webkit (Chrome, Safari) Scrollbar */
+  .description::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .description::-webkit-scrollbar-thumb {
+    background-color: #64ffda;
+    border-radius: 10px;
+  }
+  
+  .description::-webkit-scrollbar-track {
     background: transparent;
-    color: white;
-    border: 1px solid white;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  
-  .highlight {
-    color: #64ffda;
-  }
-  
-  h1, h2 {
-    font-size: 36px;
-    margin: 10px 0;
-  }
-  
-  p {
-    font-size: 18px;
-    color: #ccc;
   }
   

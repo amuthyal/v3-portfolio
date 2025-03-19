@@ -1,87 +1,191 @@
+/* ✅ Enable Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ✅ Sidebar Defaults */
 .sidebar {
     position: fixed;
     right: 20px;
-    top: 50%;
+    top: 57%;
     transform: translateY(-50%);
-    width: 60px; /* ✅ Default to only icons */
-    height: auto;
-    background: rgba(10, 25, 47, 0.9);
-    border-radius: 15px;
+    width: 60px;
+    background: #000;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
-    transition: width 0.3s ease-in-out;
-    overflow: hidden;
-  }
-  
-  /* ✅ Expanded Sidebar */
-  .sidebar.expanded {
-    width: 200px;
-  }
-  
-  /* ✅ Sidebar Icons */
-  .sidebar ul {
+    padding: 15px 0;
+    transition: width 0.4s ease-in-out, right 0.4s ease-in-out;
+    z-index: 1100;
+}
+
+/* ✅ Expanded Sidebar - Full Menu */
+.sidebar.expanded {
+    width: 350px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    transform: translateY(0);
+    border-radius: 0;
+    background: #000;
+    align-items: center;
+    padding: 20px;
+    transition: width 0.4s ease-in-out, right 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ✅ Sidebar Title */
+.menu-title {
+    display: none;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar.expanded .menu-title {
+    display: block;
+    opacity: 1;
+}
+
+/* ✅ Sidebar Icons - Centered */
+.sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .sidebar ul li {
+}
+
+/* ✅ Sidebar Items - Reduced Gap */
+.sidebar ul li {
     width: 100%;
-    text-align: left;
-  }
-  
-  .sidebar ul li a {
+    text-align: center;
+    margin: 6px 0;
+}
+
+/* ✅ Sidebar Links */
+.sidebar ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     width: 100%;
-    padding: 15px 10px;
-    color: white;
+    padding: 8px 0;
+    color: #aaa;
     text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* ✅ Icon Size */
+.sidebar ul li a svg {
     font-size: 18px;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .sidebar ul li a:hover {
-    background: #64ffda;
-    color: #0a192f;
-  }
-  
-  /* ✅ Show Text When Expanded */
-  .sidebar.expanded ul li a {
+    color: #aaa;
+}
+
+/* ✅ Active Section Highlight */
+.sidebar ul li a.active {
+    color: #64ffda;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.sidebar ul li a.active svg {
+    color: #64ffda;
+}
+
+/* ✅ Hover Effect */
+.sidebar ul li a:hover {
+    color: #64ffda;
+    transform: scale(1.1);
+}
+
+.sidebar ul li a:hover svg {
+    color: #64ffda;
+}
+
+/* ✅ Show Text When Expanded */
+.sidebar.expanded ul li a {
     justify-content: flex-start;
-    padding-left: 20px;
-  }
-  
-  /* ✅ Hamburger Menu */
-  .menu-toggle {
+    padding-left: 40px;
+}
+
+/* ✅ Hide Text in Default View */
+.sidebar ul li span {
+    display: none;
+}
+
+.sidebar.expanded ul li span {
+    display: inline;
+}
+
+/* ✅ Menu Toggle Button */
+.menu-toggle {
     background: transparent;
     border: none;
     color: white;
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .menu-toggle:hover {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.menu-toggle:hover {
     color: #64ffda;
-  }
-  
-  /* ✅ Hide Text in Default View */
-  .sidebar ul li span {
-    display: none;
-  }
-  
-  .sidebar.expanded ul li span {
-    display: inline;
-  }
-  
+    transform: rotate(90deg);
+}
+
+/* ✅ Page Background Change when Sidebar Opens */
+body.menu-open {
+    background: #333 !important;
+    transition: background 0.4s ease-in-out;
+}
+
+/* ✅ Overlay Effect */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ✅ Responsive Sidebar for Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        right: 10px;
+    }
+
+    .sidebar.expanded {
+        width: 280px;
+    }
+
+    .sidebar ul li a {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+    }
+}
