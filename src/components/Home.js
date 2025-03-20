@@ -6,6 +6,12 @@ import MenuToggle from "./MenuToggle";
 import Description from "./Description";
 import About from "./About";
 import Work from "./Work";
+import Education from "./Education";
+import Certifications from "./Certifications";
+import Projects from "./Projects";
+
+
+
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -86,29 +92,15 @@ const Home = () => {
           {selectedSection === "work" && <Work />}
         </section>
         <section id="education" ref={(el) => (sectionsRef.current["education"] = el)}>
-          {selectedSection === "education" && (
-            <div className="section-content">
-              <h1>Education</h1>
-              <p>Details about education will be here.</p>
-            </div>
-          )}
+          {selectedSection === "education" && <Education />}
         </section>
-        <section id="certifications" ref={(el) => (sectionsRef.current["certifications"] = el)}>
-          {selectedSection === "certifications" && (
-            <div className="section-content">
-              <h1>Certifications</h1>
-              <p>Details about certifications will be here.</p>
-            </div>
-          )}
-        </section>
-        <section id="projects" ref={(el) => (sectionsRef.current["projects"] = el)}>
-          {selectedSection === "projects" && (
-            <div className="section-content">
-              <h1>Projects</h1>
-              <p>Details about projects will be here.</p>
-            </div>
-          )}
-        </section>
+    <section id="certifications" ref={(el) => (sectionsRef.current["certifications"] = el)}>
+    {selectedSection === "certifications" && <Certifications />}
+    </section>
+    <section id="projects" ref={(el) => (sectionsRef.current["projects"] = el)}>
+    {selectedSection === "projects" && <Projects />}
+    </section>
+      
         <section id="contact" ref={(el) => (sectionsRef.current["contact"] = el)}>
           {selectedSection === "contact" && (
             <div className="section-content">

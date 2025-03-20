@@ -1,7 +1,7 @@
 import React from "react";
 import { 
   FaHome, FaUser, FaBriefcase, FaGraduationCap, 
-  FaCertificate, FaProjectDiagram, FaEnvelope
+  FaProjectDiagram, FaEnvelope, FaAward
 } from "react-icons/fa";
 import "../styles/Sidebar.css";
 
@@ -30,7 +30,7 @@ const Sidebar = ({ menuOpen, sidebarRef, setSelectedSection, setMenuOpen }) => {
             <li><a onClick={() => handleSectionClick("about")}><FaUser /> {menuOpen && <span>About</span>}</a></li>
             <li><a onClick={() => handleSectionClick("work")}><FaBriefcase /> {menuOpen && <span>Work</span>}</a></li>
             <li><a onClick={() => handleSectionClick("education")}><FaGraduationCap /> {menuOpen && <span>Education</span>}</a></li>
-            <li><a onClick={() => handleSectionClick("certifications")}><FaCertificate /> {menuOpen && <span>Certifications</span>}</a></li>
+            <li><a onClick={() => handleSectionClick("certifications")}><FaAward /> {menuOpen && <span>Certifications</span>}</a></li>
             <li><a onClick={() => handleSectionClick("projects")}><FaProjectDiagram /> {menuOpen && <span>Projects</span>}</a></li>
             <li><a onClick={() => handleSectionClick("contact")}><FaEnvelope /> {menuOpen && <span>Contact</span>}</a></li>
           </ul>
