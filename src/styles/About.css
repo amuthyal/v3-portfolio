@@ -1,23 +1,86 @@
+/* ✅ About Section Container */
 .about-container {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ✅ Align content to the left */
+    justify-content: center;
+    text-align: left;
+    height: auto;
+    max-width: 800px; /* ✅ Keep content width readable */
+    margin: 0;
+    padding: 40px;
     color: white;
-  }
-  
-  .tech-stack {
+}
+
+/* ✅ "About Me" Button */
+.about-button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* ✅ Space between icon and text */
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px; /* ✅ Space below button */
+}
+
+/* ✅ About Icon in Button */
+.about-button .about-icon {
+    font-size: 18px; /* ✅ Adjust icon size */
+}
+
+
+/* ✅ Heading */
+h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* ✅ Paragraph Styling */
+p {
+    font-size: 18px;
+    color: #aaa;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* ✅ Tech Stack Section */
+.tech-stack {
     margin-top: 20px;
-  }
-  
-  .tech-list {
+}
+
+/* ✅ Technologies List */
+.tech-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  
-  .tech-list span {
+}
+
+/* ✅ Individual Tech Item */
+.tech-list span {
     background: #64ffda;
     color: #0a192f;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 14px;
-  }
-  
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

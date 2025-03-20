@@ -1,0 +1,162 @@
+/* ✅ Work Section */
+.work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    max-width: 800px;
+    margin: 0;
+    padding: 40px;
+    color: white;
+}
+
+/* ✅ Work Button */
+.work-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 20px;
+    cursor: default;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.work-button .work-icon {
+    font-size: 18px;
+}
+
+/* ✅ Section Heading */
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h2 .highlight {
+    color: #64ffda;
+}
+
+/* ✅ Timeline Layout */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+/* ✅ Experience Item */
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* ✅ Timeline Left Side */
+.timeline-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+}
+
+/* ✅ Scroll Animation - Hidden by Default */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* ✅ Animate When in View */
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ✅ Vertical Line */
+.timeline-left::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #aaa;
+    left: 5px;
+    top: 0;
+}
+
+/* ✅ Bullet Point */
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    background: #aaa;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+/* ✅ Last Item’s Line Stops */
+.timeline-item:last-child .timeline-left::before {
+    height: 50%;
+}
+
+/* ✅ Experience Content */
+.timeline-content {
+    text-align: left;
+    flex: 1;
+}
+
+/* ✅ Experience Date */
+.timeline-date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+/* ✅ Job Title */
+h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+/* ✅ Company Name */
+.company {
+    font-size: 16px;
+    color: #aaa;
+}
+
+/* ✅ Right Panel Adjustments */
+.right-panel {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-left {
+        margin-right: 15px;
+    }
+
+    .timeline-dot {
+        width: 8px;
+        height: 8px;
+    }
+}

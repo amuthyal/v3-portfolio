@@ -1,10 +1,14 @@
 import React from "react";
+import { FaUser } from "react-icons/fa"; // ✅ Import About Icon
 import "../styles/About.css";
 
 const About = () => {
   return (
     <section id="about" className="about-container">
-      <h2>About Me</h2>
+      {/* ✅ "About Me" Button with Icon */}
+      <button className="about-button">
+        <FaUser className="about-icon" /> ABOUT
+      </button>
       <p>
         With over five years of experience in software engineering, I specialize in full-stack development with
         modern technologies such as <strong>React, Angular, GraphQL, and Node.js.</strong>
@@ -12,6 +16,8 @@ const About = () => {
       <p>
         I optimize system architecture and integrate AI/ML solutions to enhance software capabilities.
       </p>
+      
+      {/* ✅ Technologies Section */}
       <div className="tech-stack">
         <h3>Technologies I’ve Been Working With Recently:</h3>
         <div className="tech-list">
