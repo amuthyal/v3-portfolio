@@ -1,0 +1,138 @@
+/* ========= Timeline Section Container ========= */
+.timeline-container {
+    width: 100%;
+    padding: 80px 40px; /* matches about-container */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    text-align: left;
+    position: relative;
+  }
+  
+  /* ========= Resume Button ========= */
+  .resume-button {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #10b981;
+    border-radius: 6px;
+    background: transparent;
+    color: white;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  /* ========= Section Heading ========= */
+  .timeline-container h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+  
+  .highlight {
+    color: #10b981;
+  }
+  
+  .dimmed {
+    color: #aaa;
+  }
+  
+  /* ========= Timeline Layout Wrapper ========= */
+  .timeline-wrapper {
+    position: relative;
+    padding-left: 3rem; /* enough space for dot + line */
+  }
+  
+  /* Single vertical line that spans full timeline */
+  .timeline-line-absolute {
+    position: absolute;
+    top: 0.8rem; /* aligns with first dot */
+    bottom: 0;
+    left: 4.45rem; /* centers line with dot */
+    width: 2px;
+    background-color: #444;
+    z-index: 0;
+  }
+  
+  /* Stack of timeline entries */
+  .timeline {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  /* ========= Each Timeline Entry ========= */
+  .timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+  }
+  
+ /* 🟠 Default gray dot */
+.timeline-dot {
+    position: absolute;
+    left: 1rem;
+    top: 0.4rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #666;
+    z-index: 2;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* 🟢 Highlight on hover */
+  .timeline-item:hover .timeline-dot {
+    background-color: #10b981;
+    box-shadow: 0 0 8px #10b981;
+  }
+  
+  /* 🟠 Default year color */
+  .timeline-date {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #aaa;
+    transition: color 0.3s ease;
+  }
+  
+  /* 🟢 Highlight year on hover */
+  .timeline-item:hover .timeline-date {
+    color: #10b981;
+  }
+  
+  
+  /* ========= Content Next to Dot ========= */
+  .timeline-content {
+    margin-left: 7.5rem; /* space between dot/line and text */
+    flex: 1;
+  }
+  
+ 
+  
+  .institution {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  /* ========= Scroll Animation ========= */
+  .scroll-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

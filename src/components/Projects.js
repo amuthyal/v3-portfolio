@@ -1,6 +1,12 @@
 import React from "react";
 import "../styles/Projects.css";
-import { FaProjectDiagram, FaHeartbeat, FaShieldAlt, FaGlobe } from "react-icons/fa";
+import {
+  FaProjectDiagram,
+  FaHeartbeat,
+  FaShieldAlt,
+  FaGlobe,
+  FaFolderOpen,
+} from "react-icons/fa";
 
 const projects = [
   {
@@ -33,7 +39,10 @@ const projects = [
 const Projects = () => {
   return (
     <section className="projects-section">
-      <button className="projects-title-button">PROJECTS</button>
+      <button className="projects-title-button">
+        <FaFolderOpen className="projects-button-icon" />
+        PROJECTS
+      </button>
 
       <div className="project-cards">
         {projects.map((project, index) => (

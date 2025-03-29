@@ -1,0 +1,50 @@
+.contact-section {
+    width: 100%;
+    padding: 80px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  /* Button Style */
+  .contact-button {
+    padding: 0.5rem 1.2rem;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+
+  .contact-icon {
+    font-size: 1rem;
+  }
+  
+  /* Heading */
+  .contact-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  /* Description text */
+  .contact-text {
+    font-size: 1rem;
+    color: #aaa;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+  

@@ -1,121 +1,136 @@
 .projects-section {
-    width: 100%;
-    padding: 80px 40px;
-    color: white;
-  }
-  
-  .projects-title-button {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 14px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .projects-heading {
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 50px;
-  }
-  
-  .projects-heading span {
-    color: #64ffda;
-  }
-  
-  .project-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
+  width: 100%;
+  padding: 80px 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  text-align: left;
+}
+
+/* ✅ Modern button style */
+.projects-title-button {
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.projects-button-icon {
+  font-size: 1rem;
+}
+
+/* Heading (optional if using h2 instead) */
+.projects-heading {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.projects-heading span {
+  color: #64ffda;
+}
+
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 30px;
+  background-color: #000;
+  transition: border-color 0.3s;
+  gap: 30px;
+}
+
+.project-card:hover {
+  border-color: #64ffda;
+}
+
+.card-left {
+  flex: 1;
+  text-align: left;
+}
+
+.card-left h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-left p {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-badge {
+  background: #64ffda;
+  color: #0a192f;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.card-icon {
+  font-size: 28px;
+  color: #64ffda;
+  align-self: flex-start;
+}
+
+/* Optional scrollbar style */
+.project-cards::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-cards::-webkit-scrollbar-thumb {
+  background: #64ffda;
+  border-radius: 10px;
+}
+
+.project-cards::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Responsive layout */
+@media (max-width: 768px) {
   .project-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border: 1px solid #333;
-    border-radius: 15px;
-    padding: 30px;
-    background-color: #000;
-    transition: border-color 0.3s;
-    gap: 30px;
+    flex-direction: column;
   }
-  
-  .project-card:hover {
-    border-color: #64ffda;
-  }
-  
-  .card-left {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .card-left h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .card-left p {
-    font-size: 16px;
-    color: #aaa;
-    margin-bottom: 15px;
-  }
-  
-  .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .tech-badge {
-    background: #64ffda;
-    color: #0a192f;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
+
   .card-icon {
-    font-size: 28px;
-    color: #64ffda;
-    align-self: flex-start;
+    align-self: flex-end;
+    margin-top: 10px;
   }
-  
-  /* Scrollbar Styling (if needed) */
-  .project-cards::-webkit-scrollbar {
-    width: 6px;
+
+  .projects-heading {
+    font-size: 36px;
   }
-  
-  .project-cards::-webkit-scrollbar-thumb {
-    background: #64ffda;
-    border-radius: 10px;
+
+  .projects-title-button {
+    font-size: 12px;
   }
-  
-  .project-cards::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .project-card {
-      flex-direction: column;
-    }
-  
-    .card-icon {
-      align-self: flex-end;
-      margin-top: 10px;
-    }
-  
-    .projects-heading {
-      font-size: 36px;
-    }
-  
-    .projects-title-button {
-      font-size: 12px;
-    }
-  }
-  
+}
