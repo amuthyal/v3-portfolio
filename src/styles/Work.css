@@ -1,15 +1,15 @@
 /* ✅ Work Section */
 .work-container {
+    width: 100%;
+    padding: 80px 40px;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    max-width: 100%;
     text-align: left;
-    max-width: 800px;
-    margin: 0;
-    padding: 40px;
-    color: white;
 }
+
 
 /* ✅ Work Button */
 .work-button {

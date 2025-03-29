@@ -1,12 +1,15 @@
 /* ✅ Certifications Section */
 .certifications-container {
-    max-width: 100%;
-    padding: 50px 20px;
+    width: 100%;
+    padding: 80px 40px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 100%;
+    text-align: left;
 }
+
 
 /* ✅ Certifications Button */
 .certifications-button {

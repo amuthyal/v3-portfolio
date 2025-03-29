@@ -1,10 +1,15 @@
 /* ✅ Education Section */
 .education-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 50px 20px;
+    width: 100%;
+    padding: 80px 40px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    text-align: left;
 }
+
 
 /* ✅ Education Button */
 .education-button {
