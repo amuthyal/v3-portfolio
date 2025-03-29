@@ -1,11 +1,10 @@
 import React from "react";
-import { FaUser } from "react-icons/fa"; // ✅ Import About Icon
+import { FaUser } from "react-icons/fa";
 import "../styles/About.css";
 
 const About = () => {
   return (
     <section id="about" className="about-container">
-      {/* ✅ "About Me" Button with Icon */}
       <button className="about-button">
         <FaUser className="about-icon" /> ABOUT
       </button>
@@ -16,8 +15,7 @@ const About = () => {
       <p>
         I optimize system architecture and integrate AI/ML solutions to enhance software capabilities.
       </p>
-      
-      {/* ✅ Technologies Section */}
+
       <div className="tech-stack">
         <h3>Technologies I’ve Been Working With Recently:</h3>
         <div className="tech-list">

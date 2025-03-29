@@ -1,10 +1,9 @@
 /* ✅ Enable Smooth Scrolling */
 html {
     scroll-behavior: smooth;
-}
-
-/* ✅ Sidebar Defaults */
-.sidebar {
+  }
+  
+  .sidebar {
     position: fixed;
     right: 20px;
     top: 57%;
@@ -19,10 +18,9 @@ html {
     padding: 15px 0;
     transition: width 0.4s ease-in-out, right 0.4s ease-in-out;
     z-index: 1100;
-}
-
-/* ✅ Expanded Sidebar - Full Menu */
-.sidebar.expanded {
+  }
+  
+  .sidebar.expanded {
     width: 350px;
     height: 100vh;
     right: 0;
@@ -32,29 +30,26 @@ html {
     background: #000;
     align-items: center;
     padding: 20px;
-    transition: width 0.4s ease-in-out, right 0.4s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-/* ✅ Sidebar Title */
-.menu-title {
+  }
+  
+  .menu-title {
     display: none;
     color: #aaa;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
     transition: opacity 0.3s ease-in-out;
-}
-
-.sidebar.expanded .menu-title {
+  }
+  
+  .sidebar.expanded .menu-title {
     display: block;
     opacity: 1;
-}
-
-/* ✅ Sidebar Icons - Centered */
-.sidebar ul {
+  }
+  
+  .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -62,17 +57,17 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* ✅ Sidebar Items - Reduced Gap */
-.sidebar ul li {
+  }
+  
+  .sidebar ul li {
     width: 100%;
     text-align: center;
     margin: 6px 0;
-}
-
-/* ✅ Sidebar Links */
-.sidebar ul li a {
+  }
+  
+  /* ✅ Button Styling */
+  .sidebar ul li button {
+    all: unset;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,55 +75,43 @@ html {
     width: 100%;
     padding: 8px 0;
     color: #aaa;
-    text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-/* ✅ Icon Size */
-.sidebar ul li a svg {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .sidebar ul li button svg {
     font-size: 18px;
     color: #aaa;
-}
-
-/* ✅ Active Section Highlight */
-.sidebar ul li a.active {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* ✅ Hover Effect (optional) */
+  .sidebar ul li button:hover {
     color: #64ffda;
-    font-weight: bold;
-    transform: scale(1.1);
-}
-
-.sidebar ul li a.active svg {
+  }
+  
+  .sidebar ul li button:hover svg {
     color: #64ffda;
-}
-
-/* ✅ Hover Effect */
-.sidebar ul li a:hover {
-    color: #64ffda;
-    transform: scale(1.1);
-}
-
-.sidebar ul li a:hover svg {
-    color: #64ffda;
-}
-
-/* ✅ Show Text When Expanded */
-.sidebar.expanded ul li a {
+  }
+  
+  /* ❌ NO Active Highlight Anymore */
+  
+  /* ✅ Show Text When Expanded */
+  .sidebar.expanded ul li button {
     justify-content: flex-start;
     padding-left: 40px;
-}
-
-/* ✅ Hide Text in Default View */
-.sidebar ul li span {
+  }
+  
+  .sidebar ul li span {
     display: none;
-}
-
-.sidebar.expanded ul li span {
+  }
+  
+  .sidebar.expanded ul li span {
     display: inline;
-}
-
-/* ✅ Menu Toggle Button */
-.menu-toggle {
+  }
+  
+  .menu-toggle {
     background: transparent;
     border: none;
     color: white;
@@ -139,21 +122,14 @@ html {
     position: absolute;
     top: 15px;
     right: 15px;
-}
-
-.menu-toggle:hover {
+  }
+  
+  .menu-toggle:hover {
     color: #64ffda;
     transform: rotate(90deg);
-}
-
-/* ✅ Page Background Change when Sidebar Opens */
-body.menu-open {
-    background: #333 !important;
-    transition: background 0.4s ease-in-out;
-}
-
-/* ✅ Overlay Effect */
-.overlay {
+  }
+  
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -164,28 +140,28 @@ body.menu-open {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
     z-index: 1000;
-}
-
-.overlay.active {
+  }
+  
+  .overlay.active {
     opacity: 1;
     visibility: visible;
-}
-
-/* ✅ Responsive Sidebar for Mobile */
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .sidebar {
-        right: 10px;
+      right: 10px;
     }
-
+  
     .sidebar.expanded {
-        width: 280px;
+      width: 280px;
     }
-
-    .sidebar ul li a {
-        font-size: 14px;
+  
+    .sidebar ul li button {
+      font-size: 14px;
     }
-
+  
     .menu-toggle {
-        font-size: 20px;
+      font-size: 20px;
     }
-}
+  }
+  
