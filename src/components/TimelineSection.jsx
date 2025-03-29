@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/Timeline.css";
 
-const TimelineSection = ({ heading, data }) => {
+const TimelineSection = ({ data }) => {
   useEffect(() => {
     const items = document.querySelectorAll(".scroll-animation");
     const observer = new IntersectionObserver(entries => {
