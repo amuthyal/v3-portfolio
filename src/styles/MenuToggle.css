@@ -1,12 +1,12 @@
-/* ✅ Hamburger Menu - Positioned Above Sidebar with a Proper Gap */
+/* ✅ Base Style (Desktop view) */
 .menu-toggle {
     position: fixed;
+    top: calc(57% - 300px); /* slightly above sidebar */
     right: 20px;
-    top: calc(55% - 300px); /* ✅ Adjusted gap to match sidebar movement */
-    background: #000; /* ✅ Matches sidebar and page */
-    border: 2px solid rgba(255, 255, 255, 0.2); /* ✅ Subtle border */
-    border-radius: 50px; /* ✅ Circular Border */
-    width: 60px; /* ✅ Circle size */
+    background: #000;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    width: 60px;
     height: 60px;
     color: white;
     font-size: 20px;
@@ -15,11 +15,23 @@
     align-items: center;
     justify-content: center;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    z-index: 1000; /* ✅ Ensures it's always visible */
-}
-
-/* ✅ Hover Effect for Menu Icon */
-.menu-toggle:hover {
-    color: #64ffda; /* ✅ Neon Blue on hover */
+    z-index: 2000; /* stays above everything */
+  }
+  
+  /* ✅ Hover Effect */
+  .menu-toggle:hover {
+    color: #64ffda;
     transform: scale(1.1);
-}
+  }
+  
+  /* ✅ Mobile View */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      top: 20px;      /* Push to top right */
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+    }
+  }
+  

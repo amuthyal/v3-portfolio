@@ -22,7 +22,7 @@ const Home = () => {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  // ✅ Accurate Scroll Detection (center of screen inside section)
+  // ✅ Detect Active Section on Scroll
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "timeline", "certifications", "projects", "contact"];
@@ -44,7 +44,7 @@ const Home = () => {
       setActiveSection(currentSection);
     };
 
-    handleScroll(); // Run on mount
+    handleScroll(); // On mount
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -75,14 +75,14 @@ const Home = () => {
       </div>
 
       <div className="right-panel-scroll-wrapper">
-        <MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Sidebar
-          menuOpen={menuOpen}
-          sidebarRef={sidebarRef}
-          setMenuOpen={setMenuOpen}
-          onSectionSelect={scrollToSection}
-          activeSection={activeSection}
-        />
+      <MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Sidebar
+  menuOpen={menuOpen}
+  sidebarRef={sidebarRef}
+  setMenuOpen={setMenuOpen}
+  onSectionSelect={scrollToSection}
+  activeSection={activeSection}
+/>
 
         <div className="scroll-sections">
           <section id="home" className="full-section" ref={(el) => (sectionRefs.current["home"] = el)}>

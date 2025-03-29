@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "../styles/MenuToggle.css"; 
+import "../styles/MenuToggle.css";
 
 const MenuToggle = ({ menuOpen, setMenuOpen }) => {
   return (

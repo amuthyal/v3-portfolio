@@ -3,6 +3,10 @@ html {
     scroll-behavior: smooth;
   }
   
+  /* ========================
+     DESKTOP STYLES
+  ======================== */
+  
   .sidebar {
     position: fixed;
     right: 20px;
@@ -65,7 +69,6 @@ html {
     margin: 6px 0;
   }
   
-  /* ✅ Button Styling */
   .sidebar ul li button {
     all: unset;
     display: flex;
@@ -86,7 +89,6 @@ html {
     transition: color 0.3s ease-in-out;
   }
   
-  /* ✅ Hover Effect (optional) */
   .sidebar ul li button:hover {
     color: #64ffda;
   }
@@ -95,9 +97,6 @@ html {
     color: #64ffda;
   }
   
-  /* ❌ NO Active Highlight Anymore */
-  
-  /* ✅ Show Text When Expanded */
   .sidebar.expanded ul li button {
     justify-content: flex-start;
     padding-left: 40px;
@@ -111,6 +110,10 @@ html {
     display: inline;
   }
   
+  /* ========================
+     MENU TOGGLE (Hamburger)
+  ======================== */
+  
   .menu-toggle {
     background: transparent;
     border: none;
@@ -119,15 +122,20 @@ html {
     cursor: pointer;
     padding: 10px;
     transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1200;
   }
   
   .menu-toggle:hover {
     color: #64ffda;
     transform: rotate(90deg);
   }
+  
+  /* ========================
+     OVERLAY
+  ======================== */
   
   .overlay {
     position: fixed;
@@ -147,21 +155,50 @@ html {
     visibility: visible;
   }
   
+  /* ========================
+     MOBILE STYLES
+  ======================== */
+  
   @media (max-width: 768px) {
     .sidebar {
-      right: 10px;
+      display: none;
     }
   
     .sidebar.expanded {
-      width: 280px;
+      display: flex;
+      position: fixed;
+      width: 70%;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      background: #000;
+      padding: 40px 20px;
+      z-index: 1100;
+      border-radius: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
     }
   
-    .sidebar ul li button {
-      font-size: 14px;
+    .sidebar.expanded ul li button {
+      font-size: 20px;
+      justify-content: flex-start;
+      padding-left: 20px;
+    }
+  
+    .sidebar.expanded ul li span {
+      display: inline;
+    }
+  
+    .menu-title {
+      font-size: 24px;
+      margin-bottom: 30px;
     }
   
     .menu-toggle {
-      font-size: 20px;
+      top: 15px;
+      right: 15px;
+      font-size: 24px;
     }
   }
   
