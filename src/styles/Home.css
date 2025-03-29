@@ -1,56 +1,71 @@
-/* ✅ Home Container */
+/* ✅ Main Layout */
 .home-container {
     display: flex;
     height: 100vh;
-}
-
-/* ✅ Right Panel */
-.right-panel {
-    flex: 1;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* ✅ Fixed Left Panel */
+  .left-panel {
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: transparent;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* ✅ Scrollable Right Panel */
+  .right-panel-scroll-wrapper {
+    margin-left: 25%; /* Offset for fixed left panel */
+    width: 75%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    position: relative;
+  }
+  
+  /* ✅ Each Section */
+  .full-section {
+    height: 100vh;
+    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
-}
-
-/* ✅ Section Styling */
-.section-content {
+  }
+  
+  /* ✅ Section Content Styling */
+  .section-content {
     max-width: 800px;
     text-align: left;
     color: white;
-}
-
-
-/* ✅ Left Panel (Reduced Width) */
-.left-panel {
-    width: 25%; /* ✅ Reduced from 25% to 20% */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent; /* ✅ Fully Transparent */
-}
-
-
-/* ✅ Background Animation */
-.background-animation {
-    position: absolute;
-    width: 100%;
+  }
+  
+  /* ✅ Base Styles */
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: "Poppins", sans-serif;
+    color: white;
     height: 100%;
-    z-index: -1;
-}
-
-/* ✅ Enable Smooth Scrolling */
-html {
+    width: 100%;
     scroll-behavior: smooth;
-}
-
-/* ✅ Sidebar Navigation */
-.sidebar ul li a {
+  }
+  
+  /* ✅ Sidebar and Overlay */
+  .sidebar ul li a {
     cursor: pointer;
-}
-
-/* ✅ Sidebar Overlay Effect */
-.overlay {
+  }
+  
+  .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -61,15 +76,15 @@ html {
     visibility: hidden;
     transition: opacity 0.3s ease-in-out;
     z-index: 1000;
-}
-
-.overlay.active {
+  }
+  
+  .overlay.active {
     opacity: 1;
     visibility: visible;
-}
-
-/* ✅ Sidebar Close on Click */
-.sidebar.expanded + .overlay {
+  }
+  
+  .sidebar.expanded + .overlay {
     display: block;
     cursor: pointer;
-}
+  }
+  
