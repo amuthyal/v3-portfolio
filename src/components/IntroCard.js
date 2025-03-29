@@ -1,21 +1,23 @@
 import React from "react";
 import { FaGithub, FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import profileImg from "../assets/profile.jpg"; // ✅ Import image
-import "../styles/IntroCard.css"; // ✅ Import styles
+import profileImg from "../assets/profile.jpg";
+import "../styles/IntroCard.css";
 
 const IntroCard = () => {
   return (
     <div className="intro-card">
       <div className="inner-border">
-        {/* ✅ Name at the Top */}
-        <h1 className="name">Akhila Muthyala</h1>
+        <div className="name-title-row">
+          <h1 className="name">Akhila</h1>
+          <p className="roles">Front-End Engineer<br /> &  Software Developer</p>
+        </div>
 
         {/* ✅ Profile Image */}
         <div className="profile-container">
           <img src={profileImg} alt="Akhila Muthyala" className="profile-img" />
         </div>
 
-        {/* ✅ Tagline moved below image */}
+        {/* ✅ Tagline */}
         <p className="tagline">Innovative Developer | AI Enthusiast</p>
 
         {/* ✅ Social Icons */}
@@ -34,7 +36,7 @@ const IntroCard = () => {
           </a>
         </div>
 
-        {/* ✅ Hire Me Button matches Profile Image width */}
+        {/* ✅ Hire Me Button */}
         <a href="mailto:muthyala.akhila07@gmail.com" className="hire-me-btn">
           Hire Me
         </a>

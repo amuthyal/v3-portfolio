@@ -1,18 +1,17 @@
-/* ✅ INTRO CARD STYLES */
 .intro-card {
   width: 100%;
-  height: 100vh; /* Full height */
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ✅ INNER BORDER WITH ROUNDED CORNERS */
+/* ✅ INNER BORDER */
 .inner-border {
   width: 90%;
-  height: calc(100vh - 10vh); /* ✅ Leaves margin from top and bottom */
-  border: 2px solid rgba(255, 255, 255, 0.2); /* ✅ Subtle border */
-  border-radius: 50px; /* ✅ Rounded corners */
+  height: calc(100vh - 10vh);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -21,25 +20,43 @@
   margin-left: 20px;
 }
 
-/* ✅ Name */
-.name {
-  font-family: "Poppins", sans-serif; /* ✅ Matching font */
-  font-size: 40px; /* Adjust size */
-  font-weight: 300; /* ✅ Not bold */
-  color: white;
-  letter-spacing: 1px;
-  margin-bottom: 10px; /* Add space between name and image */
+/* ✅ Row for Name & Role Titles */
+.name-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 20px;
 }
 
-/* ✅ PROFILE IMAGE - SQUARE WITH ROUNDED BORDERS */
+/* ✅ Name (adjusted for slight right push) */
+.name {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  color: #64ffda;
+  margin-left: 10px; /* ✅ Slightly pushes it to the right */
+}
+
+
+/* ✅ Titles beside name */
+.roles {
+  font-size: 16px;
+  color: white;
+  text-align: right;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+/* ✅ PROFILE IMAGE */
 .profile-container {
-  margin-bottom: 10px; /* ✅ Adds spacing between image and tagline */
+  margin: 20px 0 10px;
 }
 
 .profile-img {
-  width: 250px;
-  height: 250px;
-  border-radius: 15px; /* ✅ Square but with rounded corners */
+  width: 350px;
+  height: 350px;
+  border-radius: 15px;
   object-fit: cover;
   border: 3px solid rgba(255, 255, 255, 0.2);
 }
@@ -48,7 +65,7 @@
 .tagline {
   font-size: 18px;
   color: white;
-  font-weight: 300; /* Subtle appearance */
+  font-weight: 300;
   text-align: center;
   margin-top: 10px;
 }
@@ -61,38 +78,37 @@
   margin-top: 20px;
 }
 
-/* ✅ Circular Background for Icons */
 .social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; /* Circle size */
+  width: 40px;
   height: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.2); /* ✅ Subtle border */
-  border-radius: 50%; /* ✅ Makes it a perfect circle */
-  background: rgba(255, 255, 255, 0.1); /* ✅ Light background */
-  color: #64ffda; /* ✅ Neon Blue */
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #64ffda;
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
-  background: #64ffda; /* ✅ Change background color on hover */
-  color: #0a192f; /* ✅ Dark blue for contrast */
-  transform: scale(1.1); /* ✅ Slightly enlarge */
+  background: #64ffda;
+  color: #0a192f;
+  transform: scale(1.1);
 }
 
-/* ✅ HIRE ME BUTTON (OVAL STYLE) */
+/* ✅ Hire Me Button */
 .hire-me-btn {
   display: inline-block;
   margin-top: 20px;
-  width: 250px; /* ✅ Matches Profile Image Width */
+  width: 250px;
   padding: 12px 25px;
   font-size: 18px;
   text-align: center;
   color: #0a192f;
-  background: #64ffda; /* ✅ Neon Blue */
+  background: #64ffda;
   border: none;
-  border-radius: 50px; /* ✅ Oval shape */
+  border-radius: 50px;
   cursor: pointer;
   text-decoration: none;
   font-weight: bold;
@@ -100,35 +116,52 @@
 }
 
 .hire-me-btn:hover {
-  background: #52e0c4; /* Slightly different shade */
+  background: #52e0c4;
   transform: scale(1.05);
 }
 
 /* ✅ MOBILE VIEW */
 @media (max-width: 768px) {
   .name {
-      font-size: 36px;
+    font-size: 32px;
+  }
+
+  .roles {
+    font-size: 14px;
+    line-height: 1.3;
   }
 
   .tagline {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .profile-img {
-      width: 200px;
-      height: 200px;
+    width: 200px;
+    height: 200px;
   }
 
   .hire-me-btn {
-      width: 200px; /* ✅ Matches smaller profile size */
-      font-size: 16px;
-      padding: 10px 20px;
-      border-radius: 40px; /* ✅ Keep oval shape for smaller screens */
+    width: 200px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 40px;
   }
+
   .inner-border {
-    border: none;         /* ✅ Removes the visible border */
-    border-radius: 0;     /* Optional: flatten corners if needed */
-    padding: 0;           /* Optional: adjust spacing for mobile */
-    margin-left: 0; 
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  .name-title-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .roles {
+    text-align: center;
   }
 }

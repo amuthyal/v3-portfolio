@@ -6,7 +6,11 @@ const Description = () => {
   return (
     <div className="description">
       <button className="intro-button"><FaHome /> INTRODUCE</button>
-      <h1>Say Hi from <span className="highlight">Akhila</span>,</h1>
+
+      {/* ✅ New format */}
+      <h3>Hi, my name is</h3>
+      <h1><span className="highlight">Akhila Muthyala</span></h1>
+
       <h2>Full-Stack Developer and AI Enthusiast</h2>
       <p>
         I design and build high-performance applications with a strong focus on AI-driven
