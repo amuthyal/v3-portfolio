@@ -1,5 +1,7 @@
 # 🚀 Akhila Muthyala – Developer Portfolio
 
+https://amuthyal.github.io/v3-portfolio/
+
 A fully responsive, modern portfolio website built with **React.js**, showcasing experience, projects, skills, certifications, and contact info — with smooth scroll-based transitions and a mobile-first design.
 
 ---
