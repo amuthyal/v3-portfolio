@@ -1,18 +1,22 @@
-/* ✅ Certifications Section */
 .certifications-container {
     width: 100%;
     padding: 80px 40px;
     color: white;
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .certifications-inner {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 100%;
-    text-align: left;
-}
-
-
-/* ✅ Certifications Button */
-.certifications-button {
+  }
+  
+  /* Button */
+  .certifications-button {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -24,110 +28,102 @@
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
     margin-bottom: 30px;
-}
-
-/* ✅ Section Heading */
-h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-align: left;
-}
-
-h2 .highlight {
-    color: #64ffda;
-}
-
-/* ✅ Certification List */
-.certification-list {
+  }
+  
+  /* List */
+  .certification-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
-}
-
-/* ✅ Certification Item */
-.certification-item {
+  }
+  
+  /* Individual Certification */
+  .certification-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    width: calc(100% - 80px); /* ✅ Extends till sidebar */
-    margin-right: auto;
-}
-
-/* ✅ Certification Details */
-.certification-info {
+    width: 100%;
+    background-color: #0a0a0a;
+  }
+  
+  /* Text Content */
+  .certification-info {
     text-align: left;
     flex: 1;
     padding: 20px;
-}
-
-h3 {
+  }
+  
+  .certification-info h3 {
     font-size: 22px;
     margin-bottom: 5px;
-}
-
-.issued-by {
+  }
+  
+  .issued-by {
     font-size: 16px;
     color: #aaa;
     margin-bottom: 10px;
-}
-
-h4 {
+  }
+  
+  .certification-info h4 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
-}
-
-ul {
+  }
+  
+  .certification-info ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-}
-
-ul li {
+  }
+  
+  .certification-info ul li {
     font-size: 18px;
     color: #64ffda;
     margin-bottom: 5px;
-}
-
-/* ✅ Earning Criteria */
-.earning-criteria {
+  }
+  
+  .earning-criteria {
     font-size: 14px;
     color: #aaa;
     margin-top: 10px;
-}
-
-/* ✅ Certification Image (Reduced Size) */
-.certification-image {
-    width: 40%; /* ✅ Reduced width to 40% */
-    height: auto; /* ✅ Maintains aspect ratio */
-    object-fit: contain; /* ✅ Prevents cropping */
-    border-radius: 0 10px 10px 0; /* ✅ Rounds only the right corners */
-}
-
-/* ✅ Responsive Design */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 28px;
+  }
+  
+  /* Image */
+  .certification-image {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0 10px 10px 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .certifications-container {
+      padding: 40px 20px;
     }
-
-    h3 {
-        font-size: 18px;
-    }
-
+  
     .certification-item {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      background-color: transparent;
     }
-
+  
     .certification-image {
-        width: 80%; /* ✅ Slightly smaller on mobile */
-        height: auto;
-        border-radius: 10px; /* ✅ Fully rounded in mobile */
-        margin-top: 10px;
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
     }
-}
+  
+    .certification-info h3 {
+      font-size: 18px;
+    }
+  
+    .certification-info h4 {
+      font-size: 16px;
+    }
+  }
+  

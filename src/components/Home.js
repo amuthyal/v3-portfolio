@@ -22,7 +22,6 @@ const Home = () => {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  // ✅ Detect Active Section on Scroll
   useEffect(() => {
     const handleScroll = () => {
       const sections = ["home", "about", "timeline", "certifications", "projects", "contact"];
@@ -33,7 +32,6 @@ const Home = () => {
         if (el) {
           const rect = el.getBoundingClientRect();
           const middle = window.innerHeight / 2;
-
           if (rect.top <= middle && rect.bottom >= middle) {
             currentSection = section;
             break;
@@ -44,7 +42,7 @@ const Home = () => {
       setActiveSection(currentSection);
     };
 
-    handleScroll(); // On mount
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -75,14 +73,14 @@ const Home = () => {
       </div>
 
       <div className="right-panel-scroll-wrapper">
-      <MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Sidebar
-  menuOpen={menuOpen}
-  sidebarRef={sidebarRef}
-  setMenuOpen={setMenuOpen}
-  onSectionSelect={scrollToSection}
-  activeSection={activeSection}
-/>
+        <MenuToggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+        <Sidebar
+          menuOpen={menuOpen}
+          sidebarRef={sidebarRef}
+          setMenuOpen={setMenuOpen}
+          onSectionSelect={scrollToSection}
+          activeSection={activeSection}
+        />
 
         <div className="scroll-sections">
           <section id="home" className="full-section" ref={(el) => (sectionRefs.current["home"] = el)}>

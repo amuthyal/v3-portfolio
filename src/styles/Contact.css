@@ -1,50 +1,73 @@
 .contact-section {
-    width: 100%;
-    padding: 80px 40px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 100%;
-    text-align: left;
-  }
-  
-  /* Button Style */
-  .contact-button {
-    padding: 0.5rem 1.2rem;
-    background-color: transparent;
-    border: 1px solid;
-    border-radius: 5px;
-    color: white;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
+  width: 100%;
+  padding: 80px 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .contact-icon {
-    font-size: 1rem;
+.contact-inner {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ✅ Button Style */
+.contact-button {
+  padding: 0.5rem 1.2rem;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-icon {
+  font-size: 1rem;
+}
+
+/* ✅ Heading */
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* ✅ Description text */
+.contact-text {
+  font-size: 1rem;
+  color: #aaa;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* ✅ Mobile Styles */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 60px 20px;
   }
-  
-  /* Heading */
+
   .contact-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: white;
+    font-size: 2rem;
   }
-  
-  /* Description text */
+
   .contact-text {
-    font-size: 1rem;
-    color: #aaa;
-    max-width: 700px;
-    line-height: 1.6;
+    font-size: 0.95rem;
   }
-  
+
+  .contact-button {
+    font-size: 0.75rem;
+  }
+}
