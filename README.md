@@ -67,11 +67,11 @@ npm start
 
 Desktop View:
 
-![Desktop Screenshot](./assets/preview-desktop.png)
+![Desktop Screenshot](./src/assets/preview-desktop.png)
 
 Mobile View:
 
-![Mobile Screenshot](./assets/preview-mobile.png)
+![Mobile Screenshot](./src/assets/preview-mobile.png)
 
 ---
 
