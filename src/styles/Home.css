@@ -32,13 +32,16 @@
 }
 
 .full-section {
-  height: 100vh;
+  min-height: 100vh;
   scroll-snap-align: start;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
+  box-sizing: border-box;
+  flex-direction: column;
 }
+
 
 .section-content {
   max-width: 800px;

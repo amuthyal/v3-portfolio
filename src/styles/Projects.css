@@ -27,12 +27,10 @@
   transition: all 0.3s ease;
 }
 
-
 .projects-button-icon {
   font-size: 1rem;
 }
 
-/* Heading (optional if using h2 instead) */
 .projects-heading {
   font-size: 48px;
   font-weight: 600;
@@ -85,6 +83,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 15px;
 }
 
 .tech-badge {
@@ -93,6 +92,29 @@
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;
+}
+
+/* ✅ GitHub & Live Site Buttons */
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-links a {
+  background-color: transparent;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+  transform: translateY(-2px);
 }
 
 .card-icon {
@@ -132,5 +154,15 @@
 
   .projects-title-button {
     font-size: 12px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-links a {
+    font-size: 13px;
+    text-align: center;
   }
 }

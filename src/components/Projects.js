@@ -10,29 +10,42 @@ import {
 
 const projects = [
   {
+    title: "Portfolio Project",
+    description:
+      "A fully responsive, modern portfolio website built with React.js, showcasing experience, projects, skills, certifications, and contact info — with smooth scroll-based transitions and a mobile-first design.",
+    github: "https://github.com/amuthyal/my-portfolio",
+    techStack: ["React.js", "Framer Motion", "HTML/CSS", "React Icons", "AWS S3", "JavaScript (ES6)"],
+    icon: <FaProjectDiagram />,
+  },
+  {
+    title: "Smart Note App",
+    description:
+      "A clean, AI-powered note-taking web app built with React, Firebase, and OpenAI GPT-3.5. Create, edit, summarize, and search notes with a simple, modern interface.",
+    github: "https://github.com/amuthyal/smart-note-gpt",
+    techStack: ["React", "TypeScript", "Firebase", "OpenAI GPT-3.5", "CSS", "Vite"],
+    icon: <FaProjectDiagram />,
+  },
+  {
+    title: "🏎️ F1 Analytics Predictor",
+    description:
+      "An interactive web app to predict Formula 1 podium finishes and visualize driver & team performance using real-time and historical data.",
+    github: "https://github.com/amuthyal/f1-analytics-predictor",
+    techStack: ["React", "Axios", "FastF1 API", "LightGBM", "Flask", "Python"],
+    icon: <FaProjectDiagram />,
+  },
+  {
     title: "Amazon Recommender System",
-    description: "Designed a recommender system based on product review data from Amazon.",
+    description:
+      "Designed a recommender system based on product review data from Amazon.",
     techStack: ["HTML", "CSS", "D3", "Lucene", "LDA", "Java", "Data Visualization"],
     icon: <FaGlobe />,
   },
   {
     title: "Heart Rate Prediction using Electrocardiography",
-    description: "Collected ECG sensor data and processed it to predict bradycardia.",
+    description:
+      "Collected ECG sensor data and processed it to predict bradycardia.",
     techStack: ["MATLAB", "Python", "Machine Learning", "k-means", "RPeak Detection"],
     icon: <FaHeartbeat />,
-  },
-  {
-    title: "Secure Banking System",
-    description: "Developed a secure banking web app for safe transactions & account management.",
-    techStack: ["Java", "Spring MVC", "MySQL"],
-    icon: <FaShieldAlt />,
-  },
-  {
-    title: "My Portfolio - Personal website",
-    description:
-      "This is my personal portfolio showcasing work, experience, and tech stack. Built with React and modern CSS. Hosted on GitHub Pages, soon on AWS S3 + CloudFront.",
-    techStack: ["React", "HTML", "CSS", "JavaScript", "Hooks"],
-    icon: <FaProjectDiagram />,
   },
 ];
 
@@ -56,7 +69,18 @@ const Projects = () => {
                 ))}
               </div>
             </div>
-            <div className="card-icon">{project.icon}</div>
+            {/* ✅ Clickable Icon for GitHub */}
+            {project.github && (
+              <a
+                className="card-icon"
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub Link"
+              >
+                {project.icon}
+              </a>
+            )}
           </div>
         ))}
       </div>
