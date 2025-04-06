@@ -3,7 +3,6 @@ import "../styles/Projects.css";
 import {
   FaProjectDiagram,
   FaHeartbeat,
-  FaShieldAlt,
   FaGlobe,
   FaFolderOpen,
 } from "react-icons/fa";

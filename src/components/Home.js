@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import "../styles/Home.css";
 
 import IntroCard from "./IntroCard";
@@ -10,6 +11,15 @@ import TimelineSection from "./TimelineSection";
 import Certifications from "./Certifications";
 import Projects from "./Projects";
 import Contact from "./Contact";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -83,29 +93,27 @@ const Home = () => {
         />
 
         <div className="scroll-sections">
-          <section id="home" className="full-section" ref={(el) => (sectionRefs.current["home"] = el)}>
-            <Description />
-          </section>
-
-          <section id="about" className="full-section" ref={(el) => (sectionRefs.current["about"] = el)}>
-            <About />
-          </section>
-
-          <section id="timeline" className="full-section" ref={(el) => (sectionRefs.current["timeline"] = el)}>
-            <TimelineSection heading="Education & Experience" data={timelineData} />
-          </section>
-
-          <section id="certifications" className="full-section" ref={(el) => (sectionRefs.current["certifications"] = el)}>
-            <Certifications />
-          </section>
-
-          <section id="projects" className="full-section" ref={(el) => (sectionRefs.current["projects"] = el)}>
-            <Projects />
-          </section>
-
-          <section id="contact" className="full-section" ref={(el) => (sectionRefs.current["contact"] = el)}>
-            <Contact />
-          </section>
+          {[
+            { id: "home", component: <Description /> },
+            { id: "about", component: <About /> },
+            { id: "timeline", component: <TimelineSection heading="Education & Experience" data={timelineData} /> },
+            { id: "certifications", component: <Certifications /> },
+            { id: "projects", component: <Projects /> },
+            { id: "contact", component: <Contact /> },
+          ].map(({ id, component }) => (
+            <motion.section
+              id={id}
+              key={id}
+              className="full-section"
+              ref={(el) => (sectionRefs.current[id] = el)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={fadeInUp}
+            >
+              {component}
+            </motion.section>
+          ))}
         </div>
       </div>
     </div>
